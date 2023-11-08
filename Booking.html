@@ -1,0 +1,2570 @@
+<html>
+<head>
+<meta name="keywords" content="Trips,travel,chillout,refresh">
+<meta name="description" content="Go around the world">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css" href="Do_an_2.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Trips</title>
+<style>
+
+*{
+	margin : 0;
+	padding: 0;
+	box-sizing : border-box;
+}
+body{
+	font-family : sans-serif;
+}
+/* Tao khung menu */
+.menu_bar{
+	background-color:#FFFFCC;
+	height: 190px;
+	width : 100%;
+	display : flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 5%;
+}
+.Logo a{
+	color : #000000;
+	font-size :30px;
+	text-decoration : none;
+	font-weight: bold;
+}
+.links1{
+	list-style : none;
+	display : flex;
+}
+.links1 li{
+	padding : 10px 30px;
+}
+.links1 li a{
+	color :#000000;
+	text-decoration : none;
+	font-size :20px;
+	transition : all 0.3s;
+}
+.links1 li a:hover{
+	background : #66CCCC;
+}
+img{
+	display:none;
+}
+.dropdown_menu{
+	position : absolute;
+	left: 0;
+	width : 100%;
+	padding: 0 30px;
+	top : 100px;
+	opacity : 0;
+	visibility : hidden;
+	z-index:3
+}
+.links1 li:hover .dropdown_menu{
+	transition : all 0.7s;
+	top : 124px;
+	opacity :1;
+	visibility : visible;
+	
+}
+.content{
+	background :#CCFFCC;
+	border : 10px;
+	padding : 25px 40px;
+	display : flex;
+	width : 100%;
+	justify-content : space-between;
+}
+.main{
+	width : 25%;
+	line-height : 45px;
+}
+img{
+	display : block;
+	width : 100%;
+	height : 100%;
+	
+}
+.main p{
+	font-size : 20px;
+	font-weight : bold;
+}
+.mega_links{
+	margin-left : -40px;
+	border-left : 3px solid #000000;
+}
+.mega_links li{
+	padding : 0 20px;
+	list-style : none;
+}
+.mega_links li a{
+	padding : 0 20px;
+	font-size : 19px;
+	display : inline-block;
+	width : 80%;
+}
+.openBtn {
+  background: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  width:50px;
+  height:40px;
+  margin-left:100px;
+}
+
+.openBtn:hover {
+  background: #bbb;
+}
+
+.overlay {
+  height: 43%;
+  width: 50%;
+  display: none;
+  position: absolute;
+  z-index: 6;
+  top: 110px;
+  left: 613px;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: absolute;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 19px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  margin-top:5px;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+.mySlides {display: none;}
+img {vertical-align: middle;
+	max-width: 100%;
+    
+    display: inline-block;
+	opacity: 1;
+	border-style:none;
+
+}
+
+
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #FFFFCC;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+	<header>
+		<div class="menu_bar">
+			<div class="Logo"> <a href="Do_an_2.html" alt="Trips">Trips</div>
+			<ul class="links1">
+				<li><a href="Do_an_2.html">Home</a></li>
+					
+				<li>
+				<a href="contact.html">Tour trong nước</a>
+				<div class="dropdown_menu">
+					<div class="content">
+						<div class="main">
+							<p>Du lịch miền Bắc</p>
+							<ul class="mega_links">
+								<li><a href="Muaban.html">Du lịch Hà Nội</a></li>
+								<li><a href="contact.html">Du lịch Sapa</a></li>
+								<li><a href="contact.html">Du lịch Hạ Long</a></li>
+							</ul>
+						</div>
+						<div class="main">
+							<p>Du lịch miền Trung</p>
+							<ul class="mega_links">
+								<li><a href="contact.html">Du lịch Đà Nẵng</a></li>
+								<li><a href="contact.html">Du lịch Phú Yên</a></li>
+								<li><a href="contact.html">Du lịch Hội An</a></li>
+							</ul>
+						</div>
+						<div class="main">
+							<p>Du lịch miền Nam</p>
+							<ul class="mega_links">
+								<li><a href="contact.html">Du lịch Côn Đảo</a></li>
+								<li><a href="contact.html">Du lịch Phú Quốc</a></li>
+								<li><a href="contact.html">Du lịch Tp Hồ Chí Minh</a></li>
+							</ul>
+						</div>
+						<div class="main">
+							<img src="imp/42.jfif" alt="Việt Nam"/>
+						</div>
+					</div>
+				</div>
+				</li>
+				<li>
+				<a href="contact.html">Tour nước ngoài</a>
+				<div class="dropdown_menu">
+					<div class="content">
+						<div class="main">
+							<p>Du lịch Châu Á</p>
+							<ul class="mega_links">
+								<li><a href="contact.html">Du lịch Hàn Quốc</a></li>
+								<li><a href="contact.html">Du lịch Nhật Bản</a></li>
+								<li><a href="contact.html">Du lịch Singapore</a></li>
+							</ul>
+						</div>
+						<div class="main">
+							<p>Du lịch Châu Âu</p>
+							<ul class="mega_links">
+								<li><a href="contact.html">Du lịch Anh</a></li>
+								<li><a href="contact.html">Du lịch Pháp</a></li>
+								<li><a href="contact.html">Du lịch Đức</a></li>
+							</ul>
+						</div>
+						<div class="main">
+							<p>Du lịch Châu Mỹ</p>
+							<ul class="mega_links">
+								<li><a href="contact.html">Du lịch Cananda</a></li>
+								<li><a href="contact.html">Du lịch Mỹ</a></li>
+								<li><a href="contact.html">Du lịch California</a></li>
+							</ul>
+						</div>
+						<div class="main">
+							<img src="imp/43.jfif" alt="EUROPE"/>
+						</div>
+					</div>
+				</div>
+				</li>
+				<li><a href="Khachsan.html">Khách Sạn</a></li>
+				<li><a href="Tin_tuc.html">Tin Tức</a></li>
+				<li><a href="contact.html">Liên Hệ</a></li>
+				<div id="myOverlay" class="overlay">
+				  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+				  <div class="overlay-content">
+					<form action="/action_page.php">
+					  <input type="text" placeholder="Search.." name="search">
+					  <button type="submit"><i class="fa fa-search"></i></button>
+					</form>
+				  </div>
+				</div>
+
+
+				<button class="openBtn" onclick="openSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+				
+			</ul>
+			
+				<script>
+				function openSearch() {
+				  document.getElementById("myOverlay").style.display = "block";
+				}
+
+				function closeSearch() {
+				  document.getElementById("myOverlay").style.display = "none";
+				}
+				</script>
+				
+		</div>
+	</header>
+	<ul class="breadcrumb">
+					  <li><a href="#">Home</a></li>
+					  <li><a href="#">Tour trong nước</a></li>
+					  <li><a href="#">Du lịch Miền Bắc</a></li>
+					  <li><a href="Muaban.html">Du lịch Hà Nội</a></li>
+					  <li>Du lịch Sapa</li>
+	</ul>
+	
+			<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container13 {
+  position: relative;
+  margin : 40px 20px 20px 20px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+hr.new4 {
+  border: 3px solid #99FFFF;
+  width : 45px;
+}
+.price{
+	font-weight: bold;
+	font-size: 25px;
+}
+#noidung p{
+	color : #666666;
+	font-size : 20px;
+}
+button {
+  position: relative;
+  padding: 12px 35px;
+  background: #FEC195;
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
+  border: 3px solid #FEC195;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #fec1958c;
+  transition: all .3s ease-in-out;
+}
+
+.star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .8s ease;
+}
+
+button:hover {
+  background: #000000;
+  color: #FEC195;
+  box-shadow: 0 0 25px #fec1958c;
+}
+
+button:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.fil0 {
+  fill: #000000;
+}
+.fa {
+  padding: 11px;
+  font-size: 22px;
+  width: 43px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+	color: #00FF66;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #FFCC99;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+.thinh1 a {
+	text-decoration:none;
+	color : #666666;
+	cursor : pointer;
+}
+.thinh1 a:hover {
+	color : 	#00FF00;
+}
+</style>
+	<div id="main" style="width:100%;height:700px" >
+
+		<div id="hinhanh" style="width:55%; float:left;">
+			<div class="container13">
+				  <div class="mySlides">
+					<div class="numbertext">1 / 6</div>
+					<img src="imp/53.jpg" style="width:100%;height:500px;">
+				  </div>
+
+				  <div class="mySlides">
+					<div class="numbertext">2 / 6</div>
+					<img src="imp/69.jpg" style="width:100%;height:500px;">
+				  </div>
+
+				  <div class="mySlides">
+					<div class="numbertext">3 / 6</div>
+					<img src="imp/55.jpg" style="width:100%;height:500px">
+				  </div>
+					
+				  <div class="mySlides">
+					<div class="numbertext">4 / 6</div>
+					<img src="imp/70.jpg" style="width:100%;height:500px">
+				  </div>
+
+				  <div class="mySlides">
+					<div class="numbertext">5 / 6</div>
+					<img src="imp/68.jpg" style="width:100%;height:500px">
+				  </div>
+					
+				  <div class="mySlides">
+					<div class="numbertext">6 / 6</div>
+					<img src="imp/58.jpg" style="width:100%;height:500px">
+				  </div>
+					
+				  <a class="prev" onclick="plusSlides(-1)">❮</a>
+				  <a class="next" onclick="plusSlides(1)">❯</a>
+
+				  <div class="caption-container">
+					<p id="caption"></p>
+				  </div>
+
+				<div class="row">
+					<div class="column">
+					  <img class="demo cursor" src="imp/53.jpg" style="width:100%; height:80px;" onclick="currentSlide(1)" alt="Ha Long Bay">
+					</div>
+					<div class="column">
+					  <img class="demo cursor" src="imp/69.jpg" style="width:100%; height:80px;" onclick="currentSlide(2)" alt="FANSIPAN">
+					</div>
+					<div class="column">
+					  <img class="demo cursor" src="imp/55.jpg" style="width:100%; height:80px;" onclick="currentSlide(3)" alt="Ha Long Night Markets">
+					</div>
+					<div class="column">
+					  <img class="demo cursor" src="imp/70.jpg" style="width:100%; height:80px;" onclick="currentSlide(4)" alt="Ha Long Bay">
+					</div>
+					<div class="column">
+					  <img class="demo cursor" src="imp/68.jpg" style="width:100%; height:80px;" onclick="currentSlide(5)" alt="SaPa">
+					</div>    
+					<div class="column">
+					  <img class="demo cursor" src="imp/58.jpg" style="width:100%; height:80px;" onclick="currentSlide(6)" alt="Snowy Mountains">
+					</div>
+				</div>
+			</div>
+
+			<script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  let i;
+			  let slides = document.getElementsByClassName("mySlides");
+			  let dots = document.getElementsByClassName("demo");
+			  let captionText = document.getElementById("caption");
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			  captionText.innerHTML = dots[slideIndex-1].alt;
+			}
+			</script>
+		</div>
+		<div id="noidung" style="width:45%;height:; float:right;background-color:">
+			<div style="margin-top : 40px">
+				<h1>Tour Miền Bắc – Hà Nội – Hạ Long – Sapa – Fansipan giá tiết kiệm</h1>
+				<br/>
+				<hr class="new4">
+				<br/>
+				<span class="price">7.599.000<sup style="font-size:18px;">đ</sup></span>
+				<p>Du Lịch Miền Bắc – Hành trình du xuân miền Bắc 5 ngày 4 đêm đến với Hà Nội – Hạ Long – Sapa chắc chắn là một chuyến du xuân thật ý nghĩa bên gia đình, bạn bè, người thương …</p>
+				<br/>
+				<p>Khởi hành: Hồ Chí Minh</p>
+				<br/>
+				<p>Thời gian: 5 ngày 4 đêm</p>
+				<br/>
+				<p>Ngày khởi hành: 11,17,24,28,31/01; 14/03; 11/10</p>
+				<br/><br/>
+				<div>
+					<button><a href="12.html" style="text-decoration : none;color:white">Đặt Ngay</a>
+					  <div class="star-1">
+						<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+					  </div>
+					  <div class="star-2">
+						<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+					  </div>
+					  <div class="star-3">
+						<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+					  </div>
+					  <div class="star-4">
+						<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+					  </div>
+					  <div class="star-5">
+						<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+					  </div>
+					  <div class="star-6">
+						<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+					  </div>
+					</button>
+				</div>
+				<br/>
+				<p class="thinh1">Danh mục: <a href="">Du lịch Hạ Long</a>,<a href="Muaban.html"> Du lịch Hà Nội</a>,<a href="#"> Du lịch miền Bắc</a>,<a href="#"> Du lịch Sa Pa</a>,<a href="#"> Du lịch trong nước</a></p>
+				<br/><br/>
+				<div>
+					<a href="https://www.facebook.com/Cristiano" class="fa fa-facebook"></a>
+					<a href="#" class="fa fa-twitter"></a>
+					<a href="#" class="fa fa-google"></a>
+					<a href="#" class="fa fa-youtube"></a>
+					<a href="#" class="fa fa-instagram"></a>
+					<a href="#" class="fa fa-pinterest"></a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+		
+	<style>
+
+.tablink  {
+  appearance: button;
+  background-color: #999;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: -54px;
+  outline: none;
+  overflow: visible;
+  padding: 13px 19px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-left: 50px;
+}
+
+.tablink :after {
+  background-clip: padding-box;
+  background-color: #222;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.tablink :main, button:focus {
+  user-select: auto;
+}
+
+.tablink :hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.tablink :disabled {
+  cursor: auto;
+}
+
+.tablink :active:after {
+  border-width: 0 0 0px;
+}
+
+.tablink :active {
+  padding-bottom: 10px;
+}
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height:auto;
+  border-style:solid;
+  border-width:thin;
+  margin : 0 50px;
+}
+
+#Home {
+	background-color: ;
+	
+	
+	
+}
+#News {background-color: ;}
+#Contact {background-color: ;}
+#About {
+	background-color: ;
+	font-size : 20px;
+	color : #353535;
+	
+}
+#Feedback {background-color: ;}
+.new5{
+		border: 3px solid #99FFFF;
+		margin : 0 140px 0 140px;
+	}
+.t{
+	padding: 0 140px 0 140px;
+	height : auto;
+	width : auto;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+.container12 {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0
+}
+
+.container12::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container12 img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container12 span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+  .container12 {
+      text-align: center;
+  }
+  .container12 img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
+.checked {
+  color: orange;
+ }
+  url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap'); 
+  body { background: #f1f1f1; } 
+
+.rating { 
+  width: 302px; 
+  height: 40px; 
+  padding: 40px 50px; 
+  border: 1px solid #ccc; 
+  background: #f9f9f9;
+  margin-left: 15px;  
+} 
+  .rating label { float: right; position: relative; width: 40px; height: 40px; cursor: pointer; } 
+  .rating label:not(:first-of-type) { padding-right: 2px; } 
+  .rating label:before { content: "\2605"; font-size: 42px; color: #ccc; line-height: 1; } 
+  .rating input { display: none; } 
+  .rating input:checked ~ label:before, 
+  .rating:not(:checked) > label:hover:before, 
+  .rating:not(:checked) > label:hover ~ label:before { color: #f9df4a; }
+ #fb{
+	height : 120px;
+	width : 700px;
+	margin-left : 15px;
+ }
+#ten{
+	width : 400px;
+	margin-left : 15px;
+	height : 30px;
+}
+#email{
+	width : 400px;
+	margin-right : 15px;
+	height : 30px;
+}
+.b1{
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  width: 120px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skew(-21deg);
+  margin-left : 15px;
+}
+
+
+
+.b1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: rgb(20, 20, 20);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.b1:hover {
+  color: #fff;
+}
+
+.b1:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 500px;
+  top : 20px;
+  height : auto;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  height:380px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+/* Here are just some visual styles. 🖌 */
+
+.container {
+  display: grid;
+  place-items: center;  
+  text-align: center;
+  height: 100vh
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+/* Timeline Container */
+.timeline {
+  background: var(--primary-color);
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Card container */
+.card {
+  position: relative;
+  max-width: 400px;
+}
+
+/* setting padding based on even or odd */
+.card:nth-child(odd) {
+  padding: 30px 1100px 30px 30px;
+}
+.card:nth-child(even) {
+  padding: 30px 30px 30px 0;
+}
+/* Global ::before */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid orangered;
+}
+
+/* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+  left: 0px;
+  top: -4.5px;
+  bottom: -4.5px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+}
+
+/* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+  left: 525px;
+  top: 0;
+  bottom: 0;
+  border-width: 5px 5px 5px 0;
+  border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first card */
+.card:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's odd */
+.card:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's even */
+.card:last-child:nth-child(even)::before {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Information about the timeline */
+.info1 {
+  display: flex;
+  flex-direction: column;
+  background: #333;
+  color: gray;
+  border-radius: 10px;
+  padding: 10px;
+  width:700px;
+}
+
+/* Title of the card */
+.title {
+  color: orangered;
+  position: relative;
+}
+
+/* Timeline dot  */
+.title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  border: 3px solid orangered;
+}
+
+/* text right if the card is even  */
+.card:nth-child(even) > .info1 > .title {
+  text-align: right;
+}
+
+/* setting dot to the left if the card is odd */
+.card:nth-child(odd) > .info1 > .title::before {
+  left: -45px;
+}
+
+/* setting dot to the right if the card is odd */
+.card:nth-child(even) > .info1 > .title::before {
+  right: -45px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: ;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  margin : 10px;
+}
+.wrapper {
+  display: flex;
+  width: 113%;
+  justify-content: space-around;
+}
+
+.card1 {
+  width: 280px;
+  height: 360px;
+  border-radius: 15px;
+  padding: 1.5rem;
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.4s ease-out;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+.card1:hover {
+  transform: translateY(20px);
+}
+.card1:hover:before {
+  opacity: 1;
+}
+.card1:hover .info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.card1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
+}
+.card1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+}
+.card1 .info {
+  position: relative;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s;
+}
+.card1 .info h1 {
+  margin: 0px;
+}
+.card1 .info p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 8px;
+}
+.card1 .info button {
+  padding: 0.6rem;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.card1 .info button:hover {
+  background: dodgerblue;
+  color: white;
+}
+.badge {
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+	</style>
+	
+	<br/><br/><br/><br/><br/><br/>
+		<hr class="new5">
+	<br/><br/>
+		<div id="describe">
+			<button class="tablink" onclick="openPage('Home', this, '')" >Mô Tả</button>
+			<button class="tablink" onclick="openPage('News', this, '')"id="defaultOpen" >Thông Tin Bổ Sung</button>
+			<button class="tablink" onclick="openPage('Contact', this, '')" >Lịch Trình</button>
+			<button class="tablink" onclick="openPage('About', this, '')">Ghi Chú</button>
+			<button class="tablink" onclick="openPage('Feedback', this, '')" >Đánh Giá</button>
+
+			<div id="Home" class="tabcontent">
+			  <h3>Du Lịch Miền Bắc – Hành trình du xuân miền Bắc 5 ngày 4 đêm đến với Hà Nội – Hạ Long – Sapa chắc chắn là một chuyến du xuân thật ý nghĩa bên gia đình, bạn bè, người thương …
+			</h3>
+			<br/>
+			  <img class="t" src="imp/60.jpg">
+			  <br/><br/>
+			  <img class="t" src="imp/61.jpg">
+			  <br/><br/>
+			  <img class="t" src="imp/62.jpg" Style="padding-left : 300px;">
+			  <br/><br/>
+			  <img class="t" src="imp/63.jpg">
+			</div>
+
+			<div id="News" class="tabcontent">
+			  <table>
+				  <tr>
+					<th>First Name</th>
+				  
+					<td>Hà Nội</td>
+				  </tr>
+				  <tr>
+					<th>Số Ngày</th>
+				 
+					<td>5</td>
+				  </tr>
+			</table>
+			</div>
+
+			<div id="Contact" class="tabcontent">
+			  <div class="timeline">
+				  <div class="outer">
+					<div class="card">
+					  <div class="info1">
+						<h3 class="title">Day 1 : TP.HCM – HÀ NỘI – HẠ LONG (Ăn trưa, chiều)</h3><br/><br/>
+						<p>Sáng: Quý khách có mặt tại ga quốc nội, sân bay Tân Sơn Nhất trước giờ bay ít nhất bai tiếng.<br/>
+							Đại diện công ty Du Lịch Việt đón và hỗ trợ Quý Khách làm thủ tục đón chuyến bay đi Hà Nội.<br/>
+							Đến sân bay Nội Bài, Hướng dẫn viên đón đoàn khởi hành đến Hạ Long.<br/>
+							Trên đường dừng chân tham quan núi Yên Tử – ngọn núi cao 1068m so với mực nước biển, một thắng cảnh thiên nhiên còn lưu giữ hệ 
+							thống các di tích lịch sử văn hóa gắn với sự ra đời, hình thành và phát triển của thiền phái Trúc Lâm Yên Tử, được mệnh danh là “đất tổ Phật giáo Việt Nam”.</p><br/><br/>
+							<p>Trưa: Dùng cơm trưa.<br/>
+								Quý khách lên núi bằng cáp treo (chi phí cáp treo tự túc), tham quan chùa Hoa Yên, Bảo Tháp, Trúc Lâm Tam Tổ, Hàng Tùng 700 tuổi…xuống núi tham quan Thiền Viện Trúc Lâm với quả cầu Như Ý nặng 6 tấn được xếp kỷ lục guiness Việt Nam.<br/>
+								Đoàn khởi hành về thành phố Hạ Long.</p><br/><br/>
+							<p>Chiều: Dùng bữa chiều. Nghỉ đêm tại Hạ Long.<br/>
+							Quý khách tự do dạo phố, mua sắm tại chợ đêm hoặc tham gia khu Sunworld Hạ Long Park với tất cả khu trò chơi trong nhà, ngoài trời hoành tráng có các khu Công viên Rồng, Cáp treo Nữ Hoàng vòng quay Sun wheel…(chi phí tự túc).</p><br/>
+					  </div>
+					</div>
+					<div class="card">
+					  <div class="info1">
+						<h3 class="title">Day 2 : VỊNH HẠ LONG – HÀ NỘI (Ăn sáng, trưa, chiều)</h3>
+						<br/><p>Sáng: Dùng buffet sáng tại khách sạn.
+							Xuống thuyền ngoạn cảnh Vịnh Hạ Long – Di sản thiên nhiên thế giới với hàng ngàn đảo đá có hình dạng kỳ vị – chiêm ngưỡng vẻ đẹp trau chuốt, lộng lẫy của động Thiên Cung, vẻ đẹp siêu nhiên của hòn Đỉnh Hương, Gà Chọi, Chó Đá… </p><br/><br/>
+						<p>Trưa: Dùng bữa trưa trên tàu.
+							Đoàn trở về Hà Nội, trên đường ghé Bắc Ninh, tham quan Đền Đô (đền Lý Bát Đế) là nơi thờ 8 vị Vua nhà Lý, đền được xây dựng vào thế kỷ 11, một công trình kiến trúc đặc sắc với nghệ thuật điêu khắc đá tinh xảo, mang giá trị lịch sử văn hoá đậm nét của Vương Triều Lý.</p><br/><br/>
+						<p>Chiều: Dùng bữa chiều.Nghỉ đêm tại Hà Nội.
+							Quý khách có thể tham gia phố đi bộ, chợ đêm, chợ Đồng Xuân, thưởng thức đặc sản và mua quà lưu niệm.</p><br/>
+					  </div>
+					</div>
+					<div class="card">
+					  <div class="info1">
+						<h3 class="title">Day 3 :HÀ NỘI – LÀO CAI – BẢN CÁT CÁT– SAPA(Ăn sáng, trưa, chiều)</h3><br/><br/>
+						<p>Sáng: Dùng buffet sáng tại khách sạn.
+							Đoàn khởi hành đến Lào Cai trên con đường cao tốc dài nhất Việt Nam – mạch nối liền giữa Hà Nội và các tỉnh Tây Bắc.</p><br/><br/>
+						<p>Trưa: Dùng bữa trưa.
+							Đoàn tiếp tục đến thị trấn vùng cao Sapa, tận hưởng cảnh sắc núi rừng như tranh vẽ và khám phá cuộc sống của đồng bào dân tộc ít người miền Tây Bắc.
+						<br/>	Thăm bản Cát Cát, tìm hiểu nghề dệt nhuộm của dân tộc H’Mông và trạm thủy điện Cát Cát thời Pháp – nơi có 3 dòng nước hợp nhau thành dòng suối Mường Hoa.</p><br/><br/>
+						<p>Chiều: Dùng bữa chiều. Nghỉ đêm tại Sapa. Tự do dạo phố, tham quan nhà thờ đá Sapa, tham dự đêm chợ Tình (nếu đi vào tối thứ 7).</P><br/><br/>
+					  </div>
+					</div>
+					<div class="card">
+					  <div class="info1">
+						<h3 class="title">Day 4 :SAPA – FANSIPAN – HÀM RỒNG – HÀ NỘI (Ăn sáng, trưa, chiều)</h3><br/><br/>
+						<p>Sáng: Dùng buffet sáng tại khách sạn.
+							Đoàn khởi hành tham quan chinh phục Fansipan, ngọn núi cao nhất Việt Nam (3.143 m) thuộc dãy núi Hoàng Liên Sơn, cách thị trấn Sa Pa khoảng 9 km về phía tây nam.
+						<br/>	Du khách chinh phục “Nóc nhà Đông Dương” với hệ thống cáp treo Fansipan Sa Pa dài 6,2km đạt 2 kỷ lục Guinness thế giới: Cáp treo ba dây có độ chênh giữa ga đi và ga đến lớn nhất thế giới: 1410m và Cáp treo ba dây dài nhất thế giới: 6292.5m. Từ tuyến cáp treo, du khách có thể cảm nhận được thiên nhiên hùng vĩ, chiêm ngưỡng khung cảnh thung lũng Mường Hoa và rừng quốc gia Hoàng Liên từ trên cao. Ngoài ra, du khách còn có thể đến hành hương tại Khu du lịch tâm linh – Chùa Trình, Chùa Hạ tại ga đến (chi phí cáp treo tự túc)</p><br/><br/>
+						<p>Trưa: Dùng bữa trưa.
+							Tham quan và chinh phục núi Hàm Rồng với vườn lan, vườn đào, rừng đá, sân mây, lên đến Cổng trời, ngắm toàn cảnh Sapa trong sương mờ.
+							Đoàn trở về Hà Nội.</p><br/><br/>
+						<p>Tối: Dùng bữa tối. Nghỉ đêm tại Hà Nội.
+							Quý khách có thể dạo một vòng quanh thủ đô, thưởng thức các món đặc sản: bún chả cá Lả Vọng, phở Hà Nội, búng thang, bún chả, … hoặc thưởng thức café ở phố cổ, Hồ Gươm</p><br/><br/>
+					  </div>
+					</div>
+					<div class="card">
+					  <div class="info1">
+						<h3 class="title">Day 5 :HÀ NỘI – TP.HCM (Ăn sáng, trưa)</h3><br/><br/>
+						<p> Sáng: Dùng buffet sáng tại khách sạn.
+							Đoàn viếng Lăng Bác (trừ ngày thứ hai, thứ sáu bảo trì Lăng).
+							Tham quan thủ đô Hà Nội với: Phủ Chủ Tịch, ao cá, nhà sàn Bác Hồ, Chùa Một Cột, Bảo Tàng Hồ Chí Minh.</p><br/><br/>
+						<p>Trưa: Dùng cơm trưa.
+						<br/>	Tham quan Văn Miếu-Quốc Tử Giám, chùa Trấn Quốc, Hồ Tây, Hồ Trúc Bạch.
+						<br/>	Tham quan Hồ Hoàn Kiếm, Đền Ngọc Sơn.
+						<br/>	Hướng dẫn viên tiễn đoàn ra sân bay Nội Bài đón chuyến bay về TP.HCM.
+						<br/>	Kết thúc chuyến tham quan, chia tay đoàn và hẹn gặp lại.</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			</div>
+
+			<div id="About" class="tabcontent">
+			    <p><em>Giờ bay cóthể thay đổi theo quy định của hàng không. Du Lịch Việt sẽ thay đổi chương trình cho phù hợp với giờ bay mới nhưng sẽ<br /> không chịu trách nhiệm về các khoản chi phí phát sinh</em><br /><br />
+				<strong style="font-weight: bold;color:black">Giá tour bao gồm:</strong></p><br />
+				<ul>
+				<li>Vé máy bay khứ hồi TP.HCM – HÀ NỘI – TP.HCM (Vietjet Air, Jetstar Pacific)</li><br />
+				<li>Xe tham quan (xe 16 chỗ, 29 chỗ, 35 chỗ, 45 chỗ) tùy theo số lượng khách thực tế trên chuyến đi.</li><br />
+				<li>Khách sạn 3 sao tại Hà Nội: Moonview, …hoặc tương đương.</li><br />
+				<li>Khách sạn 3 sao tại Sapa: Golden Plaza, Sunshine, Cosianan, Royal, &#8230; hoặc tương đương.</li><br />
+				<li>Khách sạn 3 sao tại Hạ Long: BMC Thăng Long, Crowm, Golden, &#8230; hoặc tương đương.</li><br />
+				<li>Khách sạn đầy đủ tiện nghi 2 khách người lớn/ phòng, nếu lẻ người thứ 3, đóng phụ phí phòng đơn hoặc ngủ ghép phòng 3 khách.</li><br />
+				<li>Ăn uống theo chương trình:<br /><br />
+				<ul>
+					<li Style="margin-left:50;">Ăn phụ: 4 bữa sáng.</li><br />
+					<li Style="margin-left:50;">Ăn chính: 9 bữa chính tiêu chuẩn 120.000 đồng/bữa.</li><br />
+				</ul>
+				</li>
+				<li>Vé tham quan theo chương trình.</li><br />
+				<li>Hướng dẫn viên tiếng Việt vui vẻ nhiệt tình suốt chuyến đi.</li><br />
+				<li>Bảo hiểm với mức bồi thường tối đa 30.000.000 đồng/trường hợp.</li><br />
+				<li>Quà tặng: nón du lịch Việt, nước, khăn lạnh.</li><br />
+				</ul>
+				<p><strong style="font-weight: bold;color:black">Không bao gồm:</strong></p><br />
+				<ul>
+				<li>Bia hay nước ngọt trong các bữa ăn.</li><br />
+				<li>Chi phí cá nhân: điện thoại, giặt ủi, …</li><br />
+				<li>Chi phí cáp treo YênTử, Fansipan, Sunworld Hạ Long,…</li><br />
+				<li>Thuế VAT.</li><br />
+				</ul>
+				<p><strong style="font-weight: bold;color:black">Giá vé dành cho trẻ em:</strong></p><br />
+				<ul>
+				<li>Trẻ em dưới 02 tuổi: giá vé máy bay theo quy định của hãng hàng không; miễn giá tour. Cha, Mẹ hoặc người thân đi kèm tự lo các chi phí ăn, ngủ, tham quan (nếu có) cho bé.</li><br />
+				<li>Trẻ em từ 02 – dưới 05 tuổi: 100 % giá vé máy bay; miễn giá tour. Cha, Mẹ hoặc người thân đi kèm tự lo các chi phí ăn, ngủ, tham quan (nếu có) cho bé. Hai người lớn chỉ kèm 1 trẻ em dưới 5 tuổi, trẻ em thứ 2 trở lên phải mua ½ vé tour.</li><br />
+				<li>Trẻ em từ 05 – dưới 11 tuổi: 100 % giá vé máy bay; 50% giá tour. Bao gồm các dịch vụ ăn uống, ghế ngồi trên xe và ngủ chung với gia đình. Hai người lớn chỉ được kèm 1 trẻ em từ 5 đến dưới 11 tuổi, trẻ em thứ 2 trở lên Cha Mẹ mua thêm 1 suất giường đơn.</li><br />
+				<li>Từ 11 tuổi trở lên: 100% giá tour và tiêu chuẩn như người lớn.</li><br />
+				</ul>
+				<p><strong style="font-weight: bold;color:black">Quy định thanh toán, hủy vé:</strong></p><br />
+				<ul>
+				<li>Sau khi đăng ký, thanh toán ít nhất 50% tiền cọc và đóng hết 100% trước  khởi hành 10 ngày.</li><br />
+				<li>Khi đến ngày thanh toán đủ 100% tổng giá trị tiền tour, nếu Quý khách không thanh toán đúng hạn và đúng số tiền được xem như Quý khách tự ý huỷ tour và mất hết số tiền đã đặt cọc giữ chỗ.</li><br />
+				<li>Vé Máy Bay / vé xe lửa / vé tàu cao tốc được xuất ngay sau khi quý khách đăng ký, thanh toán, xác nhận thông tin cá nhân (họ tên, ngày tháng năm sinh…) và có những điều kiện vé như sau: Không được đổi tên, hoàn vé, hủy vé, thay đổi ngày, thay đổi hành trình.</li><br />
+				<li>Ngay sau khi đặt cọc hoặc thanh toán hoặc trước 15 ngày, nếu hủy mất 10% giá tour + 100% tiền vé máy bay.</li><br />
+				<li>Hủy từ 10 đến trước 8 ngày trước ngày khởi: chịu phí 50% giá tour + 100% tiền vé máy bay.</li><br />
+				<li>Hủy từ 8 đến 6 ngày trước ngày khởi hành: chịu phí 70% giá tour + 100% tiền vé máy bay.</li><br />
+				<li>Hủy từ 5 ngày  trước ngày khởi hành: chịu phí 100% giá tour + 100% tiền vé máy bay.</li><br />
+				<li>Trường hợp quý khách đến trễ giờ khởi hành được tính là hủy 5 ngày trước ngày khởi hành.</li><br />
+				<li>Việc huỷ bỏ chuyến đi phải được thông báo trực tiếp với Công ty hoặc qua fax, email, tin nhắn và phải được Công ty xác nhận. Việc huỷ bỏ bằng điện thoại không được chấp nhận.</li>
+				<li>Do tính chất là đoàn ghép khách lẻ, Du Lịch Việt sẽ có trách nhiệm nhận khách đăng ký cho đủ đoàn (10 khách người lớn trở lên) thì đoàn sẽ khởi hành đúng lịch trình. Nếu số lượng đoàn dưới 10 khách, công ty có trách nhiệm thông báo cho khách trước ngày khởi hành 3 ngày và sẽ thỏa thuận lại ngày khởi hành mới hoặc hoàn trả toàn bộ số tiền đã đặt cọc tour.</li><br />
+				<li>Các ngày đặt cọc, thanh toán, huỷ và dời tour: không tính thứ 7, Chủ Nhật.</li><br />
+				<li>Trong những trường hợp bất khả kháng như: khủng bố, bạo động, thiên tai, lũ lụt… Tuỳ theo tình hình thực tế và sự thuận tiện, an toàn của khách hàng, công ty Du Lịch sẽ chủ động thông báo cho khách hàng sự thay đổi như sau: huỷ hoặc thay thế bằng một chương trình mới với chi phí tương đương chương trình tham quan trước đó. Trong trường hợp chương trình mới có phát sinh thì Khách hàng sẽ thanh toán khoản phát sinh này. Tuy nhiên, mỗi bên có trách nhiệm cố gắng tối đa, giúp đỡ bên bị thiệt hại nhằm giảm thiểu các tổn thất gây ra vì lý do bất khả kháng.…</li><br />
+				<li>Đối với sự thay đổi lịch trình, giờ bay do lỗi của hãng hàng không, tàu hoả, tàu thuỷ, Du Lịch Việt sẽ không chịu trách nhiệm bất kỳ phát sinh nào do lỗi trên như: phát sinh bữa ăn, nhà hàng, khách sạn, phương tiện di chuyển, hướng dẫn viên, ….</li><br />
+				</ul>
+				<p><strong style="font-weight: bold;color:black">Lưu ý:</strong></p><br />
+				<ul>
+				<li>Khi đăng ký tour khách hàng bắt buộc phải gởi giấy tờ tùy thân cho đơn vị du lịch để vào tên xuất vé và mua bảo hiểm du lịch. Những giấy tờ cá nhân của khách hàng (CMND hoặc Passport) thuộc về trách nhiệm của khách hàng. Mọi vấn đề như hình ảnh, thông tin giấy tờ trong bản gốc bị mờ, không rõ ràng; Passport, CMND hết hạn,… không đúng quy định của pháp luật Việt Nam, Du Lịch Việt sẽ không chịu trách nhiệm và sẽ không hoàn trả bất cứ chi phí phát sinh nào.</li><br />
+				<li>Đối với khách Nước ngoài/Việt Kiều: Khi đi tour phải mang theo đầy đủ Passport (Hộ Chiếu), Visa Việt Nam bản chính còn hạn sử dụng làm thủ tục lên máy bay theo qui định hàng không.</li><br />
+				<li>Trẻ em (dưới 12 tuổi) khi đi du lịch mang theo giấy khai sinh (bản chính hoặc sao y có thị thực còn hạn sử dụng) để  làm thủ tục hàng không.</li><br />
+				<li>Quý khách từ 14 tuổi bắt buộc phải có CMND hoặc Passport (còn hạn sử dụng), KHÔNG SỬ DỤNG GIẤY KHAI SINH. Nếu Quý khách từ 14 tuổi chưa có CMND hoặc Passport bắt buộc phải có Giấy xác nhận nhân thân (Có xác nhận chính quyền (còn hạn sử dụng)) + Giấy khai sinh.</li><br />
+				<li>Một số thứ tự, chi tiết trong chương trình; giờ bay; giờ xe lửa; giờ tàu cao tốc có thể thay đổi để phù hợp với tình hình thực tế của chuyến đi (thời tiết, giao thông…)</li><br />
+				<li>Qui định nhận &amp; trả phòng tại các khách sạn/resort: nhận phòng sau 14H00 và trả phòng trước 12H00 .</li><br />
+				<li>Hành lý và tư trang du khách tự bảo quản trong quá trình du lịch .</li><br />
+				<li>Vì lý do sức khỏe và an toàn vệ sinh thực phẩm, Quý Khách vui lòng không mang thực phẩm từ bên ngoài vào nhà hàng, khách sạn. Đối với thức uống khi mang vào phải có sự đồng ý của nhà hàng, khách sạn và bị tính phí nếu có.</li><br />
+				</ul>
+			</div>
+			<div id="Feedback" class="tabcontent"> 
+			  <div>
+					<span class="heading">User Rating</span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star"></span>
+					<p>4.1 average based on 254 reviews.</p>
+					<hr style="border:3px solid #f1f1f1">
+
+					<div class="row1">
+					  <div class="side">
+						<div>5 star</div>
+					  </div>
+					  <div class="middle">
+						<div class="bar-container">
+						  <div class="bar-5"></div>
+						</div>
+					  </div>
+					  <div class="side right">
+						<div>150</div>
+					  </div>
+					  <div class="side">
+						<div>4 star</div>
+					  </div>
+					  <div class="middle">
+						<div class="bar-container">
+						  <div class="bar-4"></div>
+						</div>
+					  </div>
+					  <div class="side right">
+						<div>63</div>
+					  </div>
+					  <div class="side">
+						<div>3 star</div>
+					  </div>
+					  <div class="middle">
+						<div class="bar-container">
+						  <div class="bar-3"></div>
+						</div>
+					  </div>
+					  <div class="side right">
+						<div>15</div>
+					  </div>
+					  <div class="side">
+						<div>2 star</div>
+					  </div>
+					  <div class="middle">
+						<div class="bar-container">
+						  <div class="bar-2"></div>
+						</div>
+					  </div>
+					  <div class="side right">
+						<div>6</div>
+					  </div>
+					  <div class="side">
+						<div>1 star</div>
+					  </div>
+					  <div class="middle">
+						<div class="bar-container">
+						  <div class="bar-1"></div>
+						</div>
+					  </div>
+					  <div class="side right">
+						<div>20</div>
+					  </div>
+					</div>
+			  </div>
+			  <br/><br/><br/>
+			  <div>
+				<div class="container12">
+				  <img src="imp/gamer.png" alt="Avatar" style="width:90px;height:auto">
+				  <p><span><i>Chris Fox.</i></span> CEO at Mighty Schools.</p>
+				  <p>I feel very wonderful with this trip, I will come back to this wonderful place <i class="fa-solid fa-seedling"></i><i class="fa-solid fa-person-walking-luggage fa-beat" style="color: #0bf40f;"></i></p>
+				  <span class="fa fa-star checked"></span>
+				  <span class="fa fa-star checked"></span>
+				  <span class="fa fa-star checked"></span>
+				  <span class="fa fa-star checked"></span>
+				  <span class="fa fa-star checked"></span>
+				</div>
+			  </div>
+			   <div>
+				<div class="container12">
+				  <img src="imp/a1.jpg" alt="Avatar" style="width:90px;height:auto">
+				  <p><span><i>Perter Pan.</i></span> A happy man.</p>
+				  <p>I love it ! <i class="fa-solid fa-heart fa-beat" style="color: #f20707;"></i>,Hope to have a chance to come back</p>
+				  <span class="fa fa-star checked"></span>
+				  <span class="fa fa-star checked"></span>
+				  <span class="fa fa-star checked"></span>
+				  <span class="fa fa-star checked"></span>
+				  <span class="fa fa-star "></span>
+				</div>
+			  </div>
+			  <div Style="border:  solid 	#FFFF66;">
+					<h4 style="padding:15px 20px;">Hãy nhận xét “Tour Miền Bắc – Hà Nội – Hạ Long – Sapa – Fansipan giá tiết kiệm</h4>
+					<br/>
+					<p style="font-weight: bold;color:black;padding:15px 20px;">Đánh giá của bạn</p><br/>
+					<div class="rating"> 
+						<input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label> 
+						<input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label> 
+						<input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label> 
+						<input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label> 
+						<input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label> 
+					</div> 
+					<br/>
+					<p style="font-weight: bold;color:black;padding:15px 20px;">Nhận xét của bạn</p><br/>
+					<input type="text" id="fb" name="fb">
+					<br/>
+					<div style="height:100px;">
+						<div style="float : left;">
+							<p style="font-weight: bold;color:black;padding:15px 20px;">Tên *</p>
+							<input type="ten" id="ten" name="ten">
+						</div>
+						<div style="float : right;">
+							<p style="font-weight: bold;color:black;padding:15px 20px;">Email *</p>
+							<input type="email" id="email" name="email">
+						</div>
+					</div>
+					<div>
+						<button class="b1" onclick="openForm()">
+							<span>Send</span>
+						</button>
+						<div class="chat-popup" id="myForm">
+							<form action="/action_page.php" class="form-container">
+								<h1>Message</h1>
+								<br/>
+								<label for="msg"><b>Cảm ơn quý khách vì đã góp ý</b></label><br/><br/>
+								<label for="msg"><b>Chúng tôi sẽ thay đổi</b></label><br/>
+								 <div>
+									  <h3 class="title">
+										<span class="title-word title-word-1">Thank</span>
+										<span class="title-word title-word-2">you</span>
+										<span class="title-word title-word-3">so</span>
+										<span class="title-word title-word-4">much</span>
+									  </h3>
+								 </div>
+								<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+							</form>
+						</div>
+						<script>
+						function openForm() {
+						  document.getElementById("myForm").style.display = "block";
+						}
+
+						function closeForm() {
+						  document.getElementById("myForm").style.display = "none";
+						}
+						</script>
+					</div>
+			  </div>
+			</div>
+			<script>
+			function openPage(pageName,elmnt,color) {
+			  var i, tabcontent, tablinks;
+			  tabcontent = document.getElementsByClassName("tabcontent");
+			  for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			  }
+			  tablinks = document.getElementsByClassName("tablink");
+			  for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].style.backgroundColor = "";
+			  }
+			  document.getElementById(pageName).style.display = "block";
+			  elmnt.style.backgroundColor = color;
+			}
+
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+			</script>
+		</div> 
+		<br/><br/>
+		<div style="">
+			<h1 Style="padding-left:40px">Sản Phẩm Tương Tự <span class="badge">Hot</span></h1>
+			<div class="grid-container">
+				<div class="wrapper">
+				  <div class="card1"><img src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"/>
+					<div class="info">
+					  <h1>Du lịch Côn Đảo</h1>
+					  <p>Du lịch Côn Đảo 2 ngày 1 đêm bay từ Sài Gòn</p>
+					  <button>Read More</button>
+					</div>
+				  </div>
+				  <div class="card1"><img src="https://images.unsplash.com/photo-1425342605259-25d80e320565?auto=format&amp;fit=crop&amp;w=750&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"/>
+					<div class="info">
+					  <h1>Du lịch Miền Bắc</h1>
+					  <p>Du lịch Miền Bắc - Sapa - Fansipan 5 ngày Tết Nguyên Đán</p>
+					  <button>Read More</button>
+					</div>
+				  </div>
+				  <div class="card1"><img src="imp/67.jpg"/>
+					<div class="info">
+					  <h1>Du lịch Miền Nam</h1>
+					  <p>Du lịch Phú Quốc - Nam Đảo 3 ngày 2 đêm </p>
+					  <button>Read More</button>
+					</div>
+				  </div>
+				  <div class="card1"><img src="imp/66.jpg"/>
+					<div class="info">
+					  <h1>Du lịch Miền Trung</h1>
+					  <p>Du lịch Phú Yên 3 ngày 2 đêm tiết kiệm dịp Tết</p>
+					  <button>Read More</button>
+					</div>
+				  </div>
+				</div>
+		</div>
+		</div>
+	<br/><br/><br/>
+<style>
+	*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+
+.logo{
+	font-size:2em;
+	
+}
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-image: url("imp/v.jpg");
+}
+
+footer .containert{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer .containert .noi-dung{
+    margin-right: 30px;
+}
+
+footer  .containert .noi-dung.about{
+    width:40%;
+}
+footer .containert .noi-dung.about h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+footer .containert .noi-dung.about h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f00;
+}
+
+footer .containert .noi-dung.about p{
+    color: #999;
+}
+
+.social-icon{
+    margin-top: 20px;
+    display: flex;
+}
+
+.social-icon li {
+    list-style: none;
+}
+.social-icon li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.social-icon li a:hover{
+    background: #f00;
+}
+
+.social-icon li a .fa{
+    color: #FFF;
+    font-size: 20px;
+}
+
+.linksb h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.linksb h2{
+     position: relative;
+     color: #fff;
+     font-weight: 500;
+     margin-bottom: 15px;
+ }
+.linksb h2::before{
+     content: '';
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 50px;
+     height: 2px;
+     background: #f00;
+ }
+.linksb{
+    position: relative;
+    width: 25%;
+ }
+ .linksb ul li{
+     list-style: none;
+ }
+ .linksb ul li a{
+     color: #999;
+     text-decoration: none;
+     margin-bottom: 10px;
+     display: inline-block;
+ }
+.linksb ul li a:hover{
+     color: #fff;
+ }
+
+.contact h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.contact h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f00;
+}
+
+.contact{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+
+.contact .info{
+    position: relative;
+}
+.contact .info li{
+    display: flex;
+    margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contact .info li span{
+    color: #999;
+}
+
+.contact .info li a{
+    color: #999;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin-top:16px;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+.btn--primary {
+    background: #222;
+    color: #fff;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+    border-radius: 2px;
+    padding: 8px 24px;
+}
+.btn--primary:hover {
+    background: #f00;
+}
+.btn--primary:active {
+    background: #f00;
+    box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+
+.form__field {
+    width: 90%;
+    background: #fff;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+    border: 0;
+    outline: 0;
+    padding: 8px 4px;
+}
+
+@media  (max-width: 768px){
+    footer{
+        padding: 40px;
+        
+    }
+    footer .containert{
+        flex-direction: column;
+    }
+    footer .containert .noi-dung{
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    footer .containert, .noi-dung.about, .links, .contact{
+        width: 100%;
+    }
+}
+@keyframes filling {
+  from{
+    background-position: center 25%;
+  }
+  to {
+    background-position: center 50%;
+  }
+}
+
+.container-text {
+  background-image:  url(https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color:  #FFFFFF;
+  padding-top: 20px;
+  font-size: 90px;
+  font-family: 'Bungee', cursive;
+  animation: filling 3s ease forwards;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modall {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modall-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+html, body, .hello-parent {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.hello-parent {
+  display: flex;
+  background: #fff;
+  background: -webkit-radial-gradient(#fff, #eaeaea); 
+  background: -o-radial-gradient(#fff, #eaeaea); 
+  background: -moz-radial-gradient(#fff, #eaeaea);
+  background: radial-gradient(#fff, #eaeaea); 
+}
+
+.hello-word {
+  margin:auto;
+}
+/* H Animation */
+
+.H-left-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  animation: H-left-move 20s ease forwards;
+}
+
+.H-mid-stroke {
+  stroke-dasharray: 37px;
+  stroke-dashoffset: 37px;
+  animation: H-mid-move 9s ease forwards;
+}
+
+.H-right-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  animation: H-right-move 13s ease forwards;
+}
+
+@keyframes H-left-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  5% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes H-mid-move {
+  0% {
+    stroke-dashoffset: 37px;
+  }
+  5% {
+    stroke-dashoffset: 37px;
+  }
+  10% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes H-right-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  5% {
+    stroke-dashoffset: 124px;
+  }
+  10% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+/* E Animation */
+
+.E-left-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  animation: E-left-move 20s ease forwards;
+}
+
+.E-top-stroke {
+  stroke-dasharray: 47px;
+  stroke-dashoffset: 47px;
+  animation: E-top-move 10s ease forwards;
+}
+
+.E-mid-stroke {
+  stroke-dasharray: 42px;
+  stroke-dashoffset: 42px;
+  animation: E-mid-move 10s ease forwards;
+}
+
+.E-bottom-stroke {
+  stroke-dasharray: 47px;
+  stroke-dashoffset: 47px;
+  animation: E-bottom-move 10s ease forwards;
+}
+
+@keyframes E-left-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  2% {
+    stroke-dashoffset: 124px;
+  }
+  6% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes E-top-move {
+  0% {
+    stroke-dashoffset: 47px;
+  }
+  6% {
+    stroke-dashoffset: 47px;
+  }
+  11% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes E-mid-move {
+  0% {
+    stroke-dashoffset: 42px;
+  }
+  8% {
+    stroke-dashoffset: 42px;
+  }
+  13% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes E-bottom-move {
+  0% {
+    stroke-dashoffset: 47px;
+  }
+  11% {
+    stroke-dashoffset: 47px;
+  }
+  16% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+/* L One Animation */
+
+.L-one-long-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  animation: L-one-long-move 20s ease forwards;
+}
+
+.L-one-short-stroke {
+  stroke-dasharray: 44px;
+  stroke-dashoffset: 44px;
+  animation: L-one-short-move 10s ease forwards;
+}
+
+@keyframes L-one-long-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  2% {
+    stroke-dashoffset: 124px;
+  }
+  7% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes L-one-short-move {
+  0% {
+    stroke-dashoffset: 44px;
+  }
+  13% {
+    stroke-dashoffset: 44px;
+  }
+  18% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+/* L Two Animation */
+
+.L-two-long-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  animation: L-two-long-move 20s ease forwards;
+}
+
+.L-two-short-stroke {
+  stroke-dasharray: 44px;
+  stroke-dashoffset: 44px;
+  animation: L-two-short-move 10s ease forwards;
+}
+
+@keyframes L-two-long-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  3% {
+    stroke-dashoffset: 124px;
+  }
+  8% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes L-two-short-move {
+  0% {
+    stroke-dashoffset: 44px;
+  }
+  15% {
+    stroke-dashoffset: 44px;
+  }
+  20% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+/* O Animation */
+
+.O-stroke {
+  stroke-dasharray: 302px;
+  stroke-dashoffset: 302px;
+  animation: O-move 20s ease forwards;
+}
+
+@keyframes O-move {
+  0% {
+    stroke-dashoffset: 302px;
+  }
+  4% {
+    stroke-dashoffset: 302px;
+  }
+  9% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+/* Red Dot Animation */
+
+.red-dot {
+  stroke-width: 44px;
+  stroke-linecap: round;
+  animation: red-dot-grow 8s ease-out forwards;
+}
+
+@keyframes red-dot-grow {
+  0% {
+    stroke-width: 0px;
+  }
+  15% {
+    stroke-width: 0px;
+  }
+  20% {
+    stroke-width: 44px;
+  }
+  100% {
+    stroke-width: 44px;
+  }
+}
+</style>
+<div>
+<footer>
+ <div class="containert">
+			 <!--Bắt Đầu Nội Dung Giới Thiệu-->
+			 <div class="noi-dung about">
+				<h2 class="container-text">Trips</h2>
+				 <p> "Một chuyến đi không chỉ là sự di chuyển, đó là một hành trình trải nghiệm. Khám phá địa điểm độc đáo và không giới hạn cùng chúng tôi . Tận hưởng mọi khoảnh khắc của chuyến đi của bạn".</p>
+				 <ul class="social-icon">
+					 <li><a href=""><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></a></li>
+					 <li><a href=""><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a></li>
+					 <li><a href=""><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a></li>
+					 <li><a href=""><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a></li>
+				 </ul>
+			 </div>
+			 <!--Kết Thúc Nội Dung Giới Thiệu-->
+			 <!--Bắt Đầu Nội Dung Đường Dẫn-->
+			 <div class="noi-dung linksb">
+				 <h2>Đường Dẫn</h2>
+				 <ul>
+					 <li><a href="Trips.html">Trang Chủ</a></li>
+					 <li><a href="#">Về Chúng Tôi</a></li>
+					 <li><a href="#">Thông Tin Liên Lạc</a></li>
+					 <li><a href="#">Dịch Vụ</a></li>
+					 <li><a href="#">Điều Kiện Chính Sách</a></li>
+				 </ul>
+			 </div>
+			 <!--Kết Thúc Nội Dung Đường Dẫn-->
+			 <!--Bắt Đâu Nội Dung Liên Hệ-->
+			 <div class="noi-dung contact">
+				 <h2>Thông Tin Liên Hệ</h2>
+				 <ul class="info">
+					 <li>
+						 <span><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i></span>
+						 <span>So 3<br />
+							pho Quyet Thang  Thành Phố Hai Duong<br />
+							 Việt Nam</span>
+					 </li>
+					 <li>
+						 <span><i class="fa fa-phone"></i></span>
+						 <p><a href="#">+84 123 456 789</a>
+							 <br />
+							 <a href="#">+84 987 654 321</a></p>
+					 </li>
+					 <li>
+						 <span><i class="fa fa-envelope"></i></span>
+						 <p><a href="#">thinh31082003@gmail.com</a></p>
+					</li>
+					 <li>
+						 
+<!-- Trigger/Open The Modal -->
+<button id="nut"><i class="fa-solid fa-check" style="color: #1f5141;"></i></button>
+
+<!-- The Modal -->
+<div id="hinh" class="modall">
+
+  <!-- Modal content -->
+  <div class="modall-content">
+    <span class="close">&times;</span>
+    <!-- This is a recreation of the SVG animation that can be found on Wokine.com -->
+
+<div class="hello-parent">
+  
+<svg class="hello-word" width="365" height="365" viewBox="0 0 365 365">
+  
+  
+  <g id="H-letter">
+  <line class="H-left-stroke" x1="17" y1="0" x2="17" y2="124" stroke="#000" fill="none" stroke-width="34" />
+  <line class="H-mid-stroke" x1="33" y1="62" x2="68" y2="62" stroke="#000" fill="none" stroke-width="34" />
+  <line class="H-right-stroke" x1="84" y1="0" x2="84" y2="124" stroke="#000" fill="none" stroke-width="34" />
+  </g>
+  
+  <g id="E-letter">
+    <line class="E-left-stroke" x1="138" y1="0" x2="138" y2="124" stroke="#000" fill="none" stroke-width="34" />
+    <line class="E-top-stroke" x1="154" y1="17" x2="201" y2="17" stroke="#000" fill="none" stroke-width="34" />
+    <line class="E-mid-stroke" x1="154" y1="62" x2="196" y2="62" stroke="#000" fill="none" stroke-width="34" />
+    <line class="E-bottom-stroke" x1="154" y1="107" x2="201" y2="107" stroke="#000" fill="none" stroke-width="34" />
+  </g>
+  
+  <g id="L-one-letter">
+    <line class="L-one-long-stroke" x1="17" y1="153" x2="17" y2="277" stroke="#000" fill="none" stroke-width="34" />
+    <line class="L-one-short-stroke" x1="33" y1="260" x2="77" y2="260" stroke="#000" fill="none" stroke-width="34" />
+  </g>
+  
+  <g id="L-two-letter">
+    <line class="L-two-long-stroke" x1="104" y1="153" x2="104" y2="277" stroke="#000" fill="none" stroke-width="34" />
+    <line class="L-two-short-stroke" x1="120" y1="260" x2="164" y2="260" stroke="#000" fill="none" stroke-width="34" />
+  </g>
+  
+  <g id="O-letter">
+    <circle class="O-stroke" cx="231" cy="215" r="48" stroke="#000" fill="none" stroke-width="31" />
+  </g>
+  
+  <g id="red-dot">
+    <!-- Initially I tried creating a circle but it was harder to manipulate it how I wanted to in CSS so I resorted to using a line trick to make it look like a circle ....
+    
+    <circle class="red-dot" cx="325" cy="260" r="20" fill="#FF5851" stroke="none" />
+
+    -->
+    
+    <line x1="325" y1="260" x2="325" y2="260" stroke="#FF5851" class="red-dot" />
+  </g>
+  
+  
+</svg>
+</div>
+
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("hinh");
+
+// Get the button that opens the modal
+var btn = document.getElementById("nut");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+					 </li>
+				 </ul>
+			 </div>
+			 <!--Kết Thúc Nội Dung Liên Hệ-->
+		 </div>
+	</footer>
+	
+	<style>
+		#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+	</style>
+	
+</div>
+<!--Nút lên top--> 
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button>
+			<script>
+		// Get the button
+		let mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+			mybutton.style.display = "block";
+		  } else {
+			mybutton.style.display = "none";
+		  }
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		</script>
+</body>

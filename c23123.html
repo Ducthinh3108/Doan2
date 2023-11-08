@@ -1,0 +1,290 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css" href="Trips.css" />
+<title>Trips</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+
+$main-color: #23abd4;
+
+body{
+  background:#000;
+  vertical-align:middle;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  height:100%;
+}
+#primary{
+  position:absolute;
+  top:0;
+  margin:auto;
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+  li{
+    margin:0 20px;
+    position:relative;
+    a{
+      text-decoration:none;
+      display:block;
+      padding:5px 0;
+      font-family:'Open Sans';
+      font-size:26px;
+      line-height:1;
+      font-weight:bold;
+      position:relative;
+      z-index:1;
+      text-align: center;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(
+          to right,
+          $main-color,
+          $main-color 50%,
+          #fff 50%);
+      background-size: 200% 100%;
+      background-position: -100%;
+      transition: all 0.3s ease-in-out;
+      &:before{
+        display:block;
+        content:'';
+        width:0;
+        height:3px;
+        bottom:5px;
+        left:0;
+        bottom:-3px;
+        z-index:0;
+        position:absolute;
+        background:$main-color;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover{
+        background-position: 0%;
+        &:before{
+          width:100%;
+        }
+      }
+    }
+  }
+}
+
+</style>
+</head>
+<body>
+.container
+  //- Pen Info
+  .info
+    h1 Article News Card
+    span Made with <i class='fa fa-heart animated infinite pulse'></i> by <a href='http://andy.design'>Andy Tran</a> | Designed by <a href='http://justinkwak.com'>JustinKwak</a>
+
+  // Normal Demo
+  .column
+    .demo-title Normal
+
+    // Post
+    .post-module
+
+      // Thumbnail
+      .thumbnail
+        .date
+          .day 27
+          .month Mar
+        img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg')
+
+      // Post Content
+      .post-content
+        .category Photos
+        h1.title City Lights in New York
+        h2.sub_title The city that never sleeps.
+        p.description New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.
+        .post-meta
+          span.timestamp
+            i.fa.fa-clock- o
+            |  6 mins ago
+          span.comments
+            i.fa.fa-comments
+            a(href='#')  39 comments
+
+  // Hover Demo
+  .column
+    .demo-title Hover
+
+    // Post
+    .post-module.hover
+
+      // Thumbnail
+      .thumbnail
+        .date
+          .day 27
+          .month Mar
+        img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg')
+
+      // Post Content
+      .post-content
+        .category Photos
+        h1.title City Lights in New York
+        h2.sub_title The city that never sleeps.
+        p.description New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.
+        .post-meta
+          span.timestamp
+            i.fa.fa-clock-o
+            |  6 mins ago
+          span.comments
+            i.fa.fa-comments
+            a(href='#')  39 comments
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html,body{
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background: rred;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.container { 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center; 
+    
+    @media (min-width: 600px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+*{
+  box-sizing: inherit;
+  transition-property: all;
+  transition-duration: .6s;
+  transition-timing-function: ease;
+}
+ a {
+    background: rgba(white, 0);
+    border-bottom: 1px solid;
+    color: 1white;
+    line-height: 1.8;
+    padding: .29em;
+    text-decoration: none;
+    
+    &:hover {
+      background: rgba($white, 1);
+      color: red;
+    }
+  }
+}
+.btn {
+  color: #fff;
+  cursor: pointer;
+  // display: block;
+  font-size:25px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px; 
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%; 
+  
+//   @media(min-width: 400px) {
+//     display: inline-block;
+//     margin-right: 2.5em;
+  
+//     &:nth-of-type(even) {
+//       margin-right: 0;
+//     }
+//   }
+  
+  @media(min-width: 600px) {
+      
+    margin: 0 1em 2em;
+  
+//     &:nth-of-type(even) {
+//       margin-right: 2.5em;
+//     }
+    
+//     &:nth-of-type(5) {
+//       margin-right: 0;
+//     }
+    
+  }
+  
+  &:hover { text-decoration: none; }
+  
+}
+.btn-2 {
+    letter-spacing: 0;
+}
+
+.btn-2:hover,
+.btn-2:active {
+  letter-spacing: 5px;
+}
+
+.btn-2:after,
+.btn-2:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.btn-2:hover:after,
+.btn-2:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.btn-2:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+  background-color :red;
+}
+
+</style>
+</head>
+<body>
+<section class="buttons">
+<div class="container">
+ <a href="https://twitter.com/Dave_Conner" class="btn btn-2">Đăng kí</a> 
+ </div>
+ </section>
+</body>
+</html>

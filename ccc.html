@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+*{
+		box-sizing : border-box;
+}
+
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+  height:270px;
+  background-image:url("imp/c.jpg ");
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  border-radius:4px;
+  	
+ 
+}
+.Logo{
+	color:#333;
+	text-decoration:none;
+	font-size:1.5em;
+	font-weight : 700;
+	text-transform :  'Bungee', cursive;
+	letter-spacing : 0.1em;
+	margin-left:50px;
+}
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+  
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 55%;
+  left: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin : 2px 0px 0px 230px;
+}
+
+/* Mega Menu header, if needed */
+.dropdown-content .header {
+  background: #222222;
+  padding: 16px;
+  color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33%;
+  padding: 10px;
+  background-color: #ccc;
+  height: 250px;
+}
+
+/* Style links inside the columns */
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a background color on hover */
+.column a:hover {
+  background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*.search {
+  float:left;
+  position: relative;
+  display: inline-block;
+  padding-left:80px;
+  
+}
+
+.search-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top :2px;
+}
+
+.search-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+ 
+}*/
+.search-content a:hover {background-color:#FFCCCC;}
+.search:hover .search-content {display: block;margin-right:300px;}
+.search:hover .dropbtn {background-color: #3e8e41;}
+#search-box{
+		background : #FFF;
+		border-radius : 30px;
+		float:right;
+	}
+#search-box #search-text{
+		border:none;
+		outline : none;
+		background : none;
+		padding : 10px 10px;
+		font-size : 18px;
+		width:0;
+		padding:0;
+		trasition : all 0.25s ease-in-out;
+}
+#search-box:hover #search-text, #search-box #search-text:valid{
+		width:280px;
+		padding:13px 0px 10px 15px;
+		
+}
+#search-box #search-btn{
+		background-color:#FFF;
+		cursor : pointer;
+		border: none;
+		padding : 14px 15px;
+		border-radius:50%;
+		font-size :13px;
+	
+}
+
+
+.openBtn {
+  background: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  width:50px;
+  height:40px;
+  margin-left:100px;
+}
+
+.openBtn:hover {
+  background: #bbb;
+}
+
+.overlay {
+  height: 65%;
+  width: 69%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 43px;
+  left: 167px;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  margin-top:5px;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+.login{
+	float: right;
+	height:100px;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+  <a class="Logo" href="Trips.html">Trips</a>
+  <a style="margin-left:250px;"href="Trips.html">Homes</a>
+  <div class="dropdown">
+		<button class="dropbtn">Tour Trong Nước
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <div class="header">
+			<h2>Du Lịch Quanh Ta</h2>
+		  </div>
+		  <div class="row">
+			<div class="column">
+			  <h3>Du Lịch Miền Bắc</h3>
+			  <a href="#">Du Lịch Hà Nội</a>
+			  <a href="#">Du Lịch Sapa</a>
+			  <a href="#">Du Lịch Hạ Long</a>
+			</div>
+			<div class="column">
+			  <h3>Du Lịch Miền Trung</h3>
+			  <a href="#">Du Lịch Đà Nẵng</a>
+			  <a href="#">Du Lịch Phú Yên</a>
+			</div>
+			<div class="column">
+			  <h3>Du Lịch Miền Nam</h3>
+			  <a href="#">Du Lịch Côn Đảo</a>
+			  <a href="#">Du Lịch Phú Quốc</a>
+			</div>
+		  </div>
+		</div>
+	</div>
+		<div class="dropdown">
+			<button class="dropbtn">Tour Nước Ngoài
+			  <i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+			  <div class="header">
+				<h3>Du Lịch Thế Giới</h2>
+			  </div>
+			  <div class="row">
+				<div class="column">
+				  <h3>Du Lịch Châu Á</h3>
+				  <a href="#">Du Lịch Hàn Quốc</a>
+				  <a href="#">Du Lịch Nhật Bản</a>
+				  <a href="#">Du Lịch Hạ Long</a>
+				</div>
+				<div class="column">
+				  <h3>Du Lịch Châu Âu</h3>
+				  <a href="#">Du Lịch Anh </a>
+				  <a href="#">Du Lịch Pháp</a>
+				</div>
+				<div class="column">
+				  <h3>Du Lịch Châu Mỹ</h3>
+				  <a href="#">Du Lịch Canada</a>
+				  <a href="#">Du Lịch Mỹ</a>
+				</div>
+			  </div>
+			</div>
+		</div>
+	<a href="#home">Khách Sạn</a>
+    <a href="#news">Tin Tức</a>
+	<a href="#news">Liên Hệ</a>
+	<!--<div class="search">
+	  <button class="dropbtn"><i class="fa-solid fa-magnifying-glass fa-beat"></i></button>
+	  <div class="search-content">
+		<a href="#"><input type="text" placeholder="Search" id="myInput" onkeyup="filterFunction()"></a>
+	  </div>
+	</div>-->
+	<div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+  <div class="overlay-content">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+
+<button class="openBtn" onclick="openSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+<script>
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+	<div class="login">
+		<a href="ccc.html"><i class="fa-solid fa-user"></i></a>
+	</div>
+</div>
+</br>
+<form action="/action_page.php" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+    
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>

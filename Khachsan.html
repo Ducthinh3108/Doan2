@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="keywords" content="Trips,travel,chillout,refresh">
+        <meta name="description" content="Go around the world">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type="text/css" href="Khachsan.css" />
+        <title>Trips</title>
+    </head>
+    <body>
+        <header>
+            <!-- Tạo Menu bar-->
+             <div class="menu_bar">
+                <div class="Logo"> <a href="Do_an_2.html" alt="Trips">Trips</div>
+                    <ul class="links">
+                    <li><a href="Do_an_2.html">Home</a></li>
+                        <li>
+                        <a href="contact.html">Tour trong nước</a>
+                        <div class="dropdown_menu">
+                            <div class="content">
+                                <div class="main">
+                                    <p>Du lịch miền Bắc</p>
+                                    <ul class="mega_links">
+                                        <li><a href="Muaban.html">Du lịch Hà Nội</a></li>
+                                        <li><a href="Muaban.html">Du lịch Sapa</a></li>
+                                        <li><a href="Muaban.html">Du lịch Hạ Long</a></li>
+                                    </ul>
+                                </div>
+                                <div class="main">
+                                    <p>Du lịch miền Trung</p>
+                                    <ul class="mega_links">
+                                        <li><a href="Muaban.html">Du lịch Đà Nẵng</a></li>
+                                        <li><a href="Muaban.html">Du lịch Phú Yên</a></li>
+                                        <li><a href="Muaban.html">Du lịch Hội An</a></li>
+                                    </ul>
+                                </div>
+                                <div class="main">
+                                    <p>Du lịch miền Nam</p>
+                                    <ul class="mega_links">
+                                        <li><a href="Muaban.html">Du lịch Côn Đảo</a></li>
+                                        <li><a href="Muaban.html">Du lịch Phú Quốc</a></li>
+                                        <li><a href="Muaban.html">Du lịch Tp Hồ Chí Minh</a></li>
+                                    </ul>
+                                </div>
+                                <div class="main">
+                                    <img src="imp/42.jfif" alt="Việt Nam"/>
+                                </div>
+                            </div>
+                        </div>
+                        </li>
+                        <li>
+                        <a href="contact.html">Tour nước ngoài</a>
+                        <div class="dropdown_menu">
+                            <div class="content">
+                                <div class="main">
+                                    <p>Du lịch Châu Á</p>
+                                    <ul class="mega_links">
+                                        <li><a href="contact.html">Du lịch Hàn Quốc</a></li>
+                                        <li><a href="contact.html">Du lịch Nhật Bản</a></li>
+                                        <li><a href="contact.html">Du lịch Singapore</a></li>
+                                    </ul>
+                                </div>
+                                <div class="main">
+                                    <p>Du lịch Châu Âu</p>
+                                    <ul class="mega_links">
+                                        <li><a href="contact.html">Du lịch Anh</a></li>
+                                        <li><a href="contact.html">Du lịch Pháp</a></li>
+                                        <li><a href="contact.html">Du lịch Đức</a></li>
+                                    </ul>
+                                </div>
+                                <div class="main">
+                                    <p>Du lịch Châu Mỹ</p>
+                                    <ul class="mega_links">
+                                        <li><a href="contact.html">Du lịch Cananda</a></li>
+                                        <li><a href="contact.html">Du lịch Mỹ</a></li>
+                                        <li><a href="contact.html">Du lịch California</a></li>
+                                    </ul>
+                                </div>
+                                <div class="main">
+                                    <img src="imp/43.jfif" alt="EUROPE"/>
+                                </div>
+                            </div>
+                        </div>
+                        </li>
+                        <li><a href="Khachsan.html">Khách Sạn</a></li>
+                        <li><a href="Tin_tuc.html">Tin Tức</a></li>
+                        <li><a href="contact.html">Liên Hệ</a></li>
+                        <!-- Nút tắt tìm kiếm-->
+                        <div id="myOverlay" class="overlay">
+                          <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+                          <div class="overlay-content">
+                            <!--Thuộc tính nút tìm kiếm-->
+                            <form action="/action_page.php">
+                              <input type="text" placeholder="Search.." name="search">
+                              <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                          </div>
+                        </div>
+        
+                        <!--Nút tìm kiếm-->
+                        <button class="openBtn" onclick="openSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        
+                    </ul>
+                    
+                    <!-- Java nút tắt tìm kiếm-->
+                        <script>
+                        function openSearch() {
+                          document.getElementById("myOverlay").style.display = "block";
+                        }
+        
+                        function closeSearch() {
+                          document.getElementById("myOverlay").style.display = "none";
+                        }
+                        </script>
+                </div>
+        </header>
+        <!-- Link nối các website-->
+            <ul class="breadcrumb">
+                <li><a href="Trips.html">Home</a></li>
+    
+                <li>Khách sạn</li>
+            </ul>
+
+            <div id="main" style="width:100%; ">				<!-- float để cố định về 1 bên -->
+		<div id="menu" style="width:25%;height:1880px; float:left;">
+			<h1>Danh Mục Sản Phẩm</h1>	
+			<hr class="new5">	
+			<br/>			
+			<div class="dropdown">
+				<a href="#">Tours</a>
+				<button onclick="myFunction()" class="dropbtn"><i class="fa fa-caret-down"></i></button>
+				<div id="myDropdown" class="dropdown-content">
+					<input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+					<a href="#">Tours Nước Ngoài</a>
+					<a href="#base">Du lịch Châu Âu</a>
+					<a href="#blog">Du Lịch Châu Mỹ</a>
+					<a href="#contact">Du Lịch Châu Á</a>
+					<a href="#">Tours Trong Nước</a>
+					<a href="#base">Du lịch Miền Bắc</a>
+					<a href="#blog">Du Lịch Miền Trung</a>
+					<a href="#contact">Du Lịch Miền Nam</a>
+				</div>
+			</div>
+			<br/><br/>
+			<div class="hotel" style="float:left">
+			<a href="#">Tin Tức</a>
+			</div>
+			<br/><br/>
+			<div class="hotel" style="float:left">
+			<a href="#">Khách Sạn</a>
+			</div>
+			<h1>Lọc Theo Giá</h1>	
+			<hr class="new5">	
+			<br/>
+			<div class="select_ipnut">
+                <span class="select-input_label">Giá</span>
+                <i class="fa fa-caret-down"></i>
+			</div>
+			<h1>Loại Giường	</h1>	
+			<hr class="new5">	
+			<br/>
+			<div>
+				<div id="myBtnContainer">
+                    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('cars')"> Single Bed</button>
+                    <button class="btn" onclick="filterSelection('animals')"> Twin Beds</button>
+                </div>
+			</div>
+			<h1>Sản Phẩm</h1>	
+			<hr class="new5">	
+			<br/>
+			<div>
+			<div class="products">
+				<img src="imp/45.png">
+				
+			</div>
+			<div class="products title">
+				Đặt Phòng Khách Sạn Victoria Sapa Resort
+				<span class="price">7,399,000đ</span>
+			</div>
+			<br/><br/><br/><br/><br/><br/>
+			</div>
+			<div>
+			<hr class="new1">
+			</div>
+			<br/><br/>
+			<div>
+			<div class="products">
+				<img src="imp/46.png">
+				
+			</div>
+			<div class="products title">
+				Beach Resort Phan Thiết Khuyến Mãi Mùa Đông
+				<span class="price">2,999,000đ</span>
+			</div>
+			<br/><br/><br/><br/><br/><br/>
+			</div>
+			<div>
+			<hr class="new1">
+			</div>
+			<div>
+			<br/><br/>
+			<div class="products">
+				<img src="imp/47.png">
+				
+			</div>
+			<div class="products title">
+				Đặt Phòng Khách Sạn Victoria Sapa Resort
+				<span class="price">7,399,000đ</span>
+			</div>
+			<br/><br/><br/><br/><br/><br/>
+			</div>
+			<div>
+			<hr class="new1">
+			</div>
+			<br/><br/>
+			<div>
+			<div class="products">
+				<img src="imp/48.png">
+				
+			</div>
+			<div class="products title">
+				Đặt Phòng Khách Sạn Grand Hồ Tràm 5 Sao
+				<span class="price">1,989,000đ</span>
+			</div>
+			<br/><br/><br/><br/><br/><br/>
+			</div>
+			<div>
+			<hr class="new1">
+			</div>
+			
+			
+			
+		</div>
+        <script>
+                /* When the user clicks on the button,
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                  document.getElementById("myDropdown").classList.toggle("show");
+                }
+                
+                function filterFunction() {
+                  var input, filter, ul, li, a, i;
+                  input = document.getElementById("myInput");
+                  filter = input.value.toUpperCase();
+                  div = document.getElementById("myDropdown");
+                  a = div.getElementsByTagName("a");
+                  for (i = 0; i < a.length; i++) {
+                    txtValue = a[i].textContent || a[i].innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                      a[i].style.display = "";
+                    } else {
+                      a[i].style.display = "none";
+                    }
+                  }
+                }
+        </script>
+        <div id="noi-dung" style="width:75%;height:900px; float:right">
+            <div class="container">
+                <div class="filterDiv cars">
+                    <div>
+                        <div><img src="imp/80.png"/></div>
+                        <h2 style="color: #353535;opacity: 0.5;font-size: 12px;">KHÁCH SẠN</h2>
+                        <p class="he">Beach Resort Phan Thiết Khuyến Mãi Mùa Đông</p>
+                        <span style="font-weight:bold">5.599.000<u>đ</u></span> 
+                    </div>
+                </div>
+                <div class="filterDiv cars">
+                    <div>
+                        <div class="hoverholder">
+                            <a href="#" class="picone">
+                              <img src="imp/81.png" alt="" />
+                            </a>
+                            <a href="#" class="pictwo">
+                              <img src="imp/82.png" alt="" />
+                            </a>
+                          </div>
+                        
+                        <h2 style="color: #353535;opacity: 0.5;font-size: 12px;">KHÁCH SẠN</h2>
+                        <p class="he">Đặt Phòng Khách Sạn Grand Hồ Tràm 5 Sao</p>
+                        <span style="font-weight:bold">1.980.000<u>đ</u></span> 
+                    </div>
+                </div>
+                
+                <div class="filterDiv cars">
+                    <div>
+                        <div><img src="imp/83.png"/></div>
+                        <h2 style="color: #353535;opacity: 0.5;font-size: 12px;">KHÁCH SẠN</h2>
+                        <p class="he">Đặt Phòng Khách Sạn Victoria Sapa Resot</p>
+                        <span style="font-weight:bold">7.399.000<u>đ</u></span> 
+                    </div>
+                </div>
+                <div class="filterDiv animals">
+                    <div>
+                        <div><img src="imp/84.jpg"/></div>
+                        <h2 style="color: #353535;opacity: 0.5;font-size: 12px;">KHÁCH SẠN</h2>
+                        <p class="he">Đặt Phòng Khách Sạn Peridot Grand Luxury Boutique Hotel</p>
+                        <span style="font-weight:bold">5.668.120<u>đ</u></span> 
+                    </div>
+                </div>
+                <div class="filterDiv animals">
+                    <div>
+                        <div class="hoverholder">
+                            <a href="#" class="picone">
+                              <img src="imp/85.jpg" alt="" />
+                            </a>
+                            <a href="#" class="pictwo">
+                              <img src="imp/86.jpg" alt="" />
+                            </a>
+                          </div>
+                        
+                        <h2 style="color: #353535;opacity: 0.5;font-size: 12px;">KHÁCH SẠN</h2>
+                        <p class="he">Đặt Phòng JW Marriott Hotel Hà Nội</p>
+                        <span style="font-weight:bold">4.980.000<u>đ</u></span> 
+                    </div>
+                </div>
+                <div class="filterDiv animals">
+                    <div>
+                        <div><img src="imp/90.jpg"/></div>
+                        <h2 style="color: #353535;opacity: 0.5;font-size: 12px;">KHÁCH SẠN</h2>
+                        <p class="he">Đặt Phòng Khách Sạn SOFITEL SAIGON PLAZA</p>
+                        <span style="font-weight:bold">4.559.000<u>đ</u></span> 
+                    </div>
+                </div>
+              </div>
+              <script>
+                filterSelection("all")
+                function filterSelection(c) {
+                  var x, i;
+                  x = document.getElementsByClassName("filterDiv");
+                  if (c == "all") c = "";
+                  for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                  }
+                }
+                
+                function w3AddClass(element, name) {
+                  var i, arr1, arr2;
+                  arr1 = element.className.split(" ");
+                  arr2 = name.split(" ");
+                  for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                  }
+                }
+                
+                function w3RemoveClass(element, name) {
+                  var i, arr1, arr2;
+                  arr1 = element.className.split(" ");
+                  arr2 = name.split(" ");
+                  for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                    }
+                  }
+                  element.className = arr1.join(" ");
+                }
+                
+                // Add active class to the current button (highlight it)
+                var btnContainer = document.getElementById("myBtnContainer");
+                var btns = btnContainer.getElementsByClassName("btn");
+                for (var i = 0; i < btns.length; i++) {
+                  btns[i].addEventListener("click", function(){
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                  });
+                }
+                </script>
+        </div>
+    </body>
+</html>
